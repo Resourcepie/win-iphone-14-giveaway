@@ -1,0 +1,260 @@
+
+<html><head><base href="https://example.com/iphone15-promo/">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Win an iPhone 15 Pro Max!</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #121212;
+        color: #e0e0e0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+    .container {
+        background-color: #1e1e1e;
+        border-radius: 10px;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+        padding: 2rem;
+        text-align: center;
+        max-width: 400px;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+    }
+    h1 {
+        color: #ffffff;
+        margin-bottom: 1rem;
+    }
+    .iphone-image {
+        width: 200px;
+        height: auto;
+        margin-bottom: 1rem;
+    }
+    .progress-bar {
+        width: 100%;
+        height: 20px;
+        background-color: #333333;
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 1rem;
+    }
+    .progress {
+        width: 0%;
+        height: 100%;
+        background-color: #4CAF50;
+        transition: width 0.5s ease-in-out;
+    }
+    .share-button {
+        background-color: #25D366;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .share-button:hover {
+        background-color: #128C7E;
+    }
+    .verify-button {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: none;
+    }
+    .verify-button:hover {
+        background-color: #45a049;
+    }
+    .testimonials {
+        margin-top: 2rem;
+        text-align: left;
+    }
+    .testimonial {
+        background-color: #2a2a2a;
+        border: 1px solid #3a3a3a;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        position: relative;
+    }
+    .testimonial::before {
+        content: '';
+        position: absolute;
+        top: -10px;
+        left: 20px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-bottom: 10px solid #2a2a2a;
+    }
+    .testimonial-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+    }
+    .testimonial-avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .testimonial-name {
+        font-weight: bold;
+        color: #ffffff;
+    }
+    .testimonial-content {
+        font-style: italic;
+        color: #cccccc;
+    }
+    .facebook-like {
+        color: #4267B2;
+        font-size: 0.9rem;
+        margin-top: 0.5rem;
+    }
+    .apple-logo {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 1rem;
+    }
+    .ribbon {
+        position: absolute;
+        width: 10px;
+        height: 30px;
+        background-color: #ff0000;
+        top: -50px;
+        opacity: 0;
+        transform-origin: 50% 100%;
+        animation: fall 3s linear infinite;
+    }
+    @keyframes fall {
+        0% {
+            transform: translateY(-50px) rotate(0deg);
+            opacity: 1;
+        }
+        100% {
+            transform: translateY(100vh) rotate(360deg);
+            opacity: 0;
+        }
+    }
+</style>
+</head>
+<body>
+    <div id="ribbon-container"></div>
+    <div class="container">
+        <svg class="apple-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+            <path fill="#ffffff" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
+        </svg>
+        <h1>Win an iPhone 15 Pro Max!</h1>
+        <img src="iphone15-pro-max.jpg" alt="iPhone 15 Pro Max in sleek titanium finish" class="iphone-image" width="200" height="300">
+        <p>Share this page with 5 friends on WhatsApp to qualify!</p>
+        <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+        </div>
+        <p id="share-count">Shares: 0/5</p>
+        <button class="share-button" id="share-button">Share on WhatsApp</button>
+        <button class="verify-button" id="verify-button">Verify Participation</button>
+
+        <div class="testimonials">
+            <h2>What people are saying:</h2>
+            <div class="testimonial">
+                <div class="testimonial-header">
+                    <img src="https://example.com/avatar1.jpg" alt="Sarah J.'s profile picture" class="testimonial-avatar" width="40" height="40">
+                    <span class="testimonial-name">Sarah J.</span>
+                </div>
+                <p class="testimonial-content">I can't believe it! I actually won the iPhone 15 Pro Max. This is not a scam, guys. It's 100% legit!</p>
+                <div class="facebook-like">👍 Like · Comment · Share</div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-header">
+                    <img src="https://example.com/avatar2.jpg" alt="Mike T.'s profile picture" class="testimonial-avatar" width="40" height="40">
+                    <span class="testimonial-name">Mike T.</span>
+                </div>
+                <p class="testimonial-content">At first, I was skeptical, but I decided to give it a try. Now I'm typing this on my brand new iPhone 15 Pro Max!</p>
+                <div class="facebook-like">👍 Like · Comment · Share</div>
+            </div>
+            <div class="testimonial">
+                <div class="testimonial-header">
+                    <img src="https://example.com/avatar3.jpg" alt="Emily R.'s profile picture" class="testimonial-avatar" width="40" height="40">
+                    <span class="testimonial-name">Emily R.</span>
+                </div>
+                <p class="testimonial-content">Just got my iPhone 15 Pro Max yesterday. The camera is amazing! Thanks for this awesome giveaway!</p>
+                <div class="facebook-like">👍 Like · Comment · Share</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let shareCount = 0;
+        const progressBar = document.getElementById('progress');
+        const shareCountText = document.getElementById('share-count');
+        const shareButton = document.getElementById('share-button');
+        const verifyButton = document.getElementById('verify-button');
+        const ribbonContainer = document.getElementById('ribbon-container');
+
+        shareButton.addEventListener('click', () => {
+            if (shareCount < 5) {
+                shareCount++;
+                updateProgress();
+                
+                // Simulate sharing (in a real scenario, you'd integrate with the WhatsApp API)
+                const shareUrl = encodeURIComponent(window.location.href);
+                const whatsappUrl = `https://api.whatsapp.com/send?text=Check%20out%20this%20amazing%20iPhone%2015%20Pro%20Max%20giveaway!%20${shareUrl}`;
+                window.open(whatsappUrl, '_blank');
+
+                if (shareCount === 5) {
+                    shareButton.style.display = 'none';
+                    verifyButton.style.display = 'inline-block';
+                    startRibbonRain();
+                }
+            }
+        });
+
+        verifyButton.addEventListener('click', () => {
+            // Simulate verification process
+            alert('Verifying your participation...');
+            setTimeout(() => {
+                alert('Verification successful! You are now entered into the draw.');
+                window.location.href = 'https://example.com/iphone15-promo/confirmation?shares=5&verified=true';
+            }, 2000);
+        });
+
+        function updateProgress() {
+            const progress = (shareCount / 5) * 100;
+            progressBar.style.width = `${progress}%`;
+            shareCountText.textContent = `Shares: ${shareCount}/5`;
+        }
+
+        function startRibbonRain() {
+            const colors = ['#ff0000', '#00ff00', '#0000ff', '#ffff00', '#ff00ff', '#00ffff'];
+            const ribbonCount = 50;
+
+            for (let i = 0; i < ribbonCount; i++) {
+                setTimeout(() => {
+                    const ribbon = document.createElement('div');
+                    ribbon.classList.add('ribbon');
+                    ribbon.style.left = `${Math.random() * 100}%`;
+                    ribbon.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    ribbon.style.animationDelay = `${Math.random() * 2}s`;
+                    ribbonContainer.appendChild(ribbon);
+
+                    // Remove the ribbon after animation ends
+                    ribbon.addEventListener('animationend', () => {
+                        ribbon.remove();
+                    });
+                }, i * 100);
+            }
+        }
+    </script>
+</body>
+</html>
